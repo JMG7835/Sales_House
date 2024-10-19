@@ -1,0 +1,25 @@
+{
+  "buyers":[
+      {
+      "name": "A",
+      "bids": [110,130]
+      }, {
+      "name": "B",
+      "bids": []
+      }, {
+      "name": "C",
+      "bids": [125]
+      }, {
+      "name": "D",
+      "bids": [105,115,90]
+      }, {
+      "name": "E",
+      "bids": [132,135,140]
+      }
+  ],
+  "reserve":
+      {
+      "name": "reserve",
+      "bids": [100]
+      }
+}
