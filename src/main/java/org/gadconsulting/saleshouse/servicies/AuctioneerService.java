@@ -21,15 +21,14 @@ public class AuctioneerService {
             winner[1] = reserve.getBids().get(0).toString();
         }
             buyers.forEach(buyer -> {
-                if(bidsIsPresent(buyer) && !buyer.getName().equals(winner[0])) {
-                    buyer.getBids().forEach( bid ->{
+                if(buyer.getBids() != null && !buyer.getBids().isEmpty()) {
+                    buyer.getBids().forEach(bid -> {
                         allPrice.add(bid);
-                        if (bid >= bidReserve.get() && bid > betterPrice.get()) {
+                        if (bid >= bidReserve.get() && bid > betterPrice.get() && !buyer.getName().equals(winner[0])) {
                             betterPrice.set(bid);
                             winner[0] = buyer.getName();
                         }
                     });
-
                 }
             });
 
